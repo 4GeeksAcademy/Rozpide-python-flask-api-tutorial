@@ -25,7 +25,7 @@ def get_todos():
 def add_new_todo():
     request_body = request.json#obtiene el body de la peticion
     request.get_json(force=True)
-    print("Incoming request with the following body", request_body)
+    print("Incoming request with the following body", request_body)#imprime el body de la peticion para verificar que se recibio a modo de depuracion
     todos.append(request_body)# este es el body que se envia en el postman
     return jsonify(todos)#devuelve la lista de todos
 
